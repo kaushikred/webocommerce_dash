@@ -1,4 +1,6 @@
 var gulp = require('gulp');
+var deploy = require('gulp-gh-pages');
+
 var args = require('yargs').argv;
 var browserSync = require('browser-sync');
 var config = require('./gulp.config')();
@@ -134,6 +136,11 @@ gulp.task('optimize', ['inject', 'sass-min'], function() {
 
 gulp.task('serve', ['inject', 'sass'], function() {
     startBrowserSync('serve');
+});
+
+gulp.task('deploy', function () {
+  return gulp.src("./dist/**/*")
+    .pipe(deploy())
 });
 
 gulp.task('build', ['optimize', 'copy'], function() {
