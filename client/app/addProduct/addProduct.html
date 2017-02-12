@@ -1,0 +1,42 @@
+<section class="container-fluid with-maxwidth-lg no-breadcrumbs chapter" ng-controller="DemoDataCtrl">
+    <div class="item-card card__horizontal" ng-repeat="item in vm.categories">
+        <div class="card__image">
+
+        <span id="button">
+                           
+          <button class="md-fab md-button md-ink-ripple" type="button"  aria-label="Eat cake">
+                            <md-icon class="material-icons ng-scope">edit</md-icon>
+                        <div class="md-ripple-container"></div>
+          </button>
+
+        </span>
+            <a href="javascript:;">
+              
+                <img alt="product" ng-src="{{::item.prod_thumbnail}}" />
+            </a>
+
+        </div>
+        <div class="card__body card-white">
+            <div class="card__title">
+                <h4>{{::item.name}}</h4>
+                <h6>{{item.category}}</h6>
+            </div>
+            <div class="card__price">
+                <span class="type--strikethrough">Rs. {{item.mrp}}</span>
+                <span>Rs. {{item.sp}}</span>
+
+            </div>
+            <p class="card__desc">{{item.description}}</p>
+
+        </div>
+    </div>
+</section>
+
+
+<style type="text/css">
+     .item-card #button {
+     float: left;
+     width: 18px;
+     
+ }
+</style>

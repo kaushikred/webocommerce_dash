@@ -1,0 +1,53 @@
+<section class="container-fluid with-maxwidth chapter">
+
+        
+
+
+    <article class="article">
+        <h2 class="article-title">Sub Categories</h2>
+        <div >
+        <button style="margin-left:auto; margin-right:10px;" class="md-fab md-button md-ink-ripple" type="button"  aria-label="Eat cake">
+                         <md-tooltip md-direction="right">
+                                  Add New Sub Category
+                                </md-tooltip>
+                        <md-icon class="material-icons ng-scope">add</md-icon>
+                        <div class="md-ripple-container"></div></button>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-4" ng-repeat="item in vm.categories">
+                <div class="card card-white" >
+                    <div class="sash sash-triangle-right sash-primary">
+                        <div>
+                            <i class="material-icons">money_off</i>
+                            <span class="sash-text">{{::item.discount}} % Off</span>
+                        </div>
+                    </div>
+                    <div class="card-image">
+                        <img ng-src="{{item.image}}" width="600px" height="400px">
+                        <span class="card-title">{{item.name}}</span>
+                    </div>
+                    <div class="card-content">
+                        <a class="card-button pull-right" href="javascript:;">
+                            <button class="btn btn-icon btn-icon-round btn-floating btn-danger"><i class="material-icons mdi-sm">mode_edit</i>
+                                <md-tooltip md-direction="left">
+                                  Edit Category
+                                </md-tooltip>
+                            </button>
+                        </a>
+                        <p>Category Description</p>
+                    </div>
+                    
+                    <div class="mdl-card__actions mdl-card--border">
+                        <md-button class="md-primary" ui-sref="app.addSuperSubCategory({ id: item.id })">Add Subcategory</md-button>
+                        <md-button class="btn-w-md md-button md-ink-ripple">Delete Category</md-button>
+                    </div>
+                 
+                </div>            
+            </div>
+            
+            
+        </div>
+    </article>    
+
+</section>

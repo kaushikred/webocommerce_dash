@@ -1,0 +1,231 @@
+<section class="container-fluid with-maxwidth chapter">
+
+        
+
+
+    <article class="article">
+        <h2 class="article-title">Categories</h2>
+        <div >
+        <button ng-click="vm.showAdvanced($event)" style="margin-left:auto; margin-right:10px;" class="md-fab md-button md-ink-ripple" type="button"  aria-label="Eat cake">
+                         <md-tooltip md-direction="right">
+                                  Add New Category
+                                </md-tooltip>
+                        <md-icon class="material-icons ng-scope">add</md-icon>
+                        <div class="md-ripple-container"></div></button>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-4" ng-repeat="item in vm.categories">
+                <div class="card card-white">
+                    <div class="card-image">
+                        <img src="assets/images-demo/assets/600_400-2.jpg">
+                        <span class="card-title">{{item.name}}</span>
+                    </div>
+                    <div class="card-content">
+                        <a class="card-button pull-right" href="javascript:;">
+                            <button class="btn btn-icon btn-icon-round btn-floating btn-danger"><i class="material-icons mdi-sm">mode_edit</i>
+                                <md-tooltip md-direction="left">
+                                  Edit Category
+                                </md-tooltip>
+                            </button>
+                        </a>
+                        <p>Category Description</p>
+                    </div>
+                    
+                    <div class="mdl-card__actions mdl-card--border">
+                        <md-button class="md-primary" ui-sref="app.addProduct({ id: item.id })">Add Products</md-button>
+                        <md-button ng-click="vm.showAlert($event)" class="btn-w-md md-button md-ink-ripple">Delete Category</md-button>
+                    </div>
+                 
+                </div>            
+            </div>
+            <!-- <div class="col-md-4">
+                <div class="card card-white">
+                    <div class="card-image">
+                        <img src="assets/images-demo/assets/600_400-2.jpg">
+                        <span class="card-title">Category Name</span>
+                    </div>
+                    <div class="card-content">
+                        <a class="card-button pull-right" href="javascript:;">
+                            <button class="btn btn-icon btn-icon-round btn-floating btn-danger"><i class="material-icons mdi-sm">mode_edit</i>
+                                <md-tooltip md-direction="left">
+                                  Edit Category
+                                </md-tooltip>
+                            </button>
+                        </a>
+                        <p>Category Description</p>
+                    </div>
+                    
+                    <div class="mdl-card__actions mdl-card--border">
+                        <md-button class="md-primary" ui-sref="app.addSubCategory">Add SubCategory</md-button>
+                        <md-button  ng-click="vm.showAlert($event)" class="btn-w-md md-button md-ink-ripple">Delete Category</md-button>
+                    </div>
+                 
+                </div>            
+            </div>
+            <div class="col-md-4">
+                <div class="card card-white">
+                    <div class="card-image">
+                        <img src="assets/images-demo/assets/600_400-2.jpg">
+                        <span class="card-title">Category Name</span>
+                    </div>
+                    <div class="card-content">
+                        <a class="card-button pull-right" href="javascript:;">
+                            <button class="btn btn-icon btn-icon-round btn-floating btn-danger"><i class="material-icons mdi-sm">mode_edit</i>
+                                <md-tooltip md-direction="left">
+                                  Edit Category
+                                </md-tooltip>
+                            </button>
+                        </a>
+                        <p>Category Description</p>
+                    </div>
+                    
+                    <div class="mdl-card__actions mdl-card--border">
+                        <md-button class="md-primary" ui-sref="app.addSubCategory">Add SubCategory</md-button>
+                        <md-button  ng-click="vm.showAlert($event)" class="btn-w-md md-button md-ink-ripple">Delete Category</md-button>
+                    </div>
+                 
+                </div>            
+            </div>
+            <div class="col-md-4">
+                <div class="card card-white">
+                    <div class="card-image">
+                        <img src="assets/images-demo/assets/600_400-2.jpg">
+                        <span class="card-title">Category Name</span>
+                    </div>
+                    <div class="card-content">
+                        <a class="card-button pull-right" href="javascript:;">
+                            <button class="btn btn-icon btn-icon-round btn-floating btn-danger"><i class="material-icons mdi-sm">mode_edit</i>
+                                <md-tooltip md-direction="left">
+                                  Edit Category
+                                </md-tooltip>
+                            </button>
+                        </a>
+                        <p>Category Description</p>
+                    </div>
+                    
+                    <div class="mdl-card__actions mdl-card--border">
+                        <md-button class="md-primary" ui-sref="app.addSubCategory">Add SubCategory</md-button>
+                        <md-button  ng-click="vm.showAlert($event)" class="btn-w-md md-button md-ink-ripple">Delete Category</md-button>
+                    </div>
+                 
+                </div>            
+            </div>
+            <div class="col-md-4">
+                <div class="card card-white">
+                    <div class="card-image">
+                        <img src="assets/images-demo/assets/600_400-2.jpg">
+                        <span class="card-title">Category Name</span>
+                    </div>
+                    <div class="card-content">
+                        <a class="card-button pull-right" href="javascript:;">
+                            <button class="btn btn-icon btn-icon-round btn-floating btn-danger"><i class="material-icons mdi-sm">mode_edit</i>
+                                <md-tooltip md-direction="left">
+                                  Edit Category
+                                </md-tooltip>
+                            </button>
+                        </a>
+                        <p>Category Description</p>
+                    </div>
+                    
+                    <div class="mdl-card__actions mdl-card--border">
+                        <md-button class="md-primary" ui-sref="app.addSubCategory">Add SubCategory</md-button>
+                        <md-button  ng-click="vm.showAlert($event)" class="btn-w-md md-button md-ink-ripple">Delete Category</md-button>
+                    </div>
+                 
+                </div>            
+            </div>
+            <div class="col-md-4">
+                <div class="card card-white">
+                    <div class="card-image">
+                        <img src="assets/images-demo/assets/600_400-2.jpg">
+                        <span class="card-title">Category Name</span>
+                    </div>
+                    <div class="card-content">
+                        <a class="card-button pull-right" href="javascript:;">
+                            <button class="btn btn-icon btn-icon-round btn-floating btn-danger"><i class="material-icons mdi-sm">mode_edit</i>
+                                <md-tooltip md-direction="left">
+                                  Edit Category
+                                </md-tooltip>
+                            </button>
+                        </a>
+                        <p>Category Description</p>
+                    </div>
+                    
+                    <div class="mdl-card__actions mdl-card--border">
+                        <md-button class="md-primary" ui-sref="app.addSubCategory">Add SubCategory</md-button>
+                        <md-button  ng-click="vm.showAlert($event)" class="btn-w-md md-button md-ink-ripple">Delete Category</md-button>
+                    </div>
+                 
+                </div>            
+            </div> -->
+            
+        </div>
+    </article>    
+
+</section>
+
+<script type="text/ng-template" id="dialog1.tmpl.html"><md-dialog aria-label="Mango (Fruit)">
+ 
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>Add Category</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+
+    <md-dialog-content>
+      <div class="md-dialog-content">
+        
+
+    <article class="article" style="width: 800px;">
+        
+            <div class="md-inline-form" layout="column">
+
+               
+                <md-content layout-padding>
+                    <div>
+                        <form name="userForm">
+                            
+                            <md-input-container class="md-block">
+                                <label>Category Name</label>
+                                <input ng-model="user.address">
+                            </md-input-container>
+                            
+                            
+                            <md-input-container class="md-block">
+                                <label>Description</label>
+                                <textarea ng-model="user.biography" md-maxlength="150" rows="5" md-select-on-focus></textarea>
+                            </md-input-container>
+
+                            <button class="md-raised btn-w-md md-primary md-button md-ink-ripple" ng-click="cancel()" type="submit" ><span class="ng-scope">Add</span><div class="md-ripple-container"></div></button>
+                        </form>
+                    </div>
+                </md-content>
+
+            </div>
+        
+    </article>
+
+
+      </div>
+    </md-dialog-content>
+
+   <!--  <md-dialog-actions layout="row">
+      <md-button href="http://en.wikipedia.org/wiki/Mango" target="_blank" md-autofocus>
+        More on Wikipedia
+      </md-button>
+      <span flex></span>
+      <md-button ng-click="answer('not useful')">
+       Not Useful
+      </md-button>
+      <md-button ng-click="answer('useful')">
+        Useful
+      </md-button>
+    </md-dialog-actions> -->
+ 
+</md-dialog>
+</script>
